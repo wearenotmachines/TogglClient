@@ -128,6 +128,11 @@ class TogglClient {
 		return $this->execute("time_entries/current")->getResponseBody();
 	}
 
+	public function getAllUsers() {
+		$workspace = $this->getWorkspace();
+		return $this->execute("workspaces/".$this->workspace['id']."/workspace_users")->getResponseBody();
+	}
+
 
 
 
